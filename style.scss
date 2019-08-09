@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$w:50px; //宽
+$h:50px; //高
+$b:.5px; //边框
+$m:20px; //整体距顶部
+$a:auto; //居中
+.box {
+    width: $w;
+    height: $h;
+    // border: $b solid rgb(163, 163, 163);
+    border: $b solid #000;
+    margin: $m $a;
+    border-radius: 50%;
+    display: flex;
+    animation: rot 5s linear infinite reverse;
+}
+
+@function px($px) {
+    @return $px/2;
+}
+
+@keyframes rot {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.left {
+    width: 50%;
+    height: 100%;
+    border-radius: px($w) 0 0 px($w);
+    background: #000;
+}
+
+.con {
+    width: 100%;
+    height: 50%;
+    border-radius: 50%;
+    background: #fff;
+    margin-left: 50%;
+    padding: 30.9%;
+}
+
+.bear1 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #000;
+}
+
+.right {
+    width: 50%;
+    height: 100%;
+    border-radius: 0 px($w) px($w) 0;
+}
+
+.con1 {
+    width: 100%;
+    height: 50%;
+    border-radius: 50%;
+    background: #000;
+    margin: 100% 0 0 -50%;
+    padding: 30.9%;
+}
+
+.bear2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #fff;
+}
